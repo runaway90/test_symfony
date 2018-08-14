@@ -12,5 +12,15 @@ blog_list:
         controller: App\Controller\TestController::list
         defaults:
             page: 'fgh'
-      #  requirements:
-       #     page: '\d+'
+        requirements:
+            page: '\d+'
+
+article_show:
+  path:     /articles/{_locale}/{year}/{slug}.{_format}
+  controller: App\Controller\ArticleController::show
+  defaults:
+      _format: html
+  requirements:
+      _locale:  en|fr
+      _format:  html|rss
+      year:     \d+

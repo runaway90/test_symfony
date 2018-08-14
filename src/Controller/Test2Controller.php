@@ -17,4 +17,5 @@ class Test2Controller extends Controller
             'path' => 'src/Controller/Test2Controller.php',
         ]);
     }
+    //http://localhost:8001/test2
 }

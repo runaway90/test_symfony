@@ -18,6 +18,8 @@ class TestController extends Controller
             'page' =>  $page,
         ]);
     }
+
+///blog/7
     /**
      * @Route("/test", name="test")
      */
