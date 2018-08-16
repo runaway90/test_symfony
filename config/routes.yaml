@@ -7,6 +7,18 @@ app_lucky_number:
     path: /lucky/number
     controller: App\Controller\LuckyController::number
 
+link:
+    path:  /link
+    controller: App\Controller\LinkController::index
+    requirements:
+        _methods: GET
+
+link_post:
+    path:  /link_post
+    controller: App\Controller\LinkController::post
+    requirements:
+        _methods: POST
+
 blog_list:
         path:      /blog/{page}
         controller: App\Controller\TestController::list
