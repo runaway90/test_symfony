@@ -9,13 +9,13 @@ app_lucky_number:
 
 link:
     path:  /link
-    controller: App\Controller\LinkController::index
+    controller: App\Controller\Linker\LinkController::index
     requirements:
         _methods: GET
 
 link_post:
     path:  /link_post
-    controller: App\Controller\LinkController::post
+    controller: App\Controller\Linker\LinkController::post
     requirements:
         _methods: POST
 

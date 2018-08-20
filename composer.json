@@ -28,6 +28,7 @@
     "autoload": {
         "psr-4": {
             "App\\": "src/",
+            "Linker\\": "src/Controller/Linker/",
             "AppBundle\\": "src/AppBundle"
         }
     },

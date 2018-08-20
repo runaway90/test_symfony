@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Controller;
+namespace App\Controller\Linker;
 
 use App\Entity\Link;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -79,7 +79,9 @@ if ($request->isMethod('POST')) {
 //            'controller_name' => $request,
 //        ]);
     }
-
+/**
+     * @Route("/link_post", name="link_post")
+     */
     public function post(Request $request){
         return $this->json([
             'message' => $request->getContent()
