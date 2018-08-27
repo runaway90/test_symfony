@@ -13,17 +13,16 @@ use Ramsey\Uuid\Uuid;
 
 class VisitorController
 {
-    private $visitor;
+    public $visitor;
 
-    public function __construct($visitor)
+    public function new($uu)
     {
-        if(!$visitor){
-            return $this->visitor = $visitor;
-        }else{
-            $visitor = new Visitor;
-            $visitor->$this->setVisitor(Uuid::uuid4());
-            return $visitor;
-        }
+            $uuid = Uuid::uuid4();
+            $uu = $uuid->toString();
+//            $visitor = new Visitor;
+//            $visitor->$this->setVisitor(Uuid::uuid4());
+            return $uu;
+
     }
 
     /**

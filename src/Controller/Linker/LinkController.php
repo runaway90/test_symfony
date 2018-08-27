@@ -3,6 +3,7 @@
 namespace App\Controller\Linker;
 
 use App\Entity\Link;
+use Ramsey\Uuid\Uuid;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpFoundation\Request;
@@ -12,11 +13,18 @@ use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 
 class LinkController extends AbstractController
 {
+    public $uu;
     /**
      * @Route("/link", name="link")
      */
     public function index(Request $request)
     {
+        $uu = [];
+        $www = new VisitorController();
+        $www->new($uu); //тут создать нового визитора
+            $uuid = Uuid::uuid4();
+            $visitor = $uuid->toString();
+        print_r($www);die();
         $link = new Link();
 //        $link->setName('Enter name');
 //        $link->setDescription('Description');

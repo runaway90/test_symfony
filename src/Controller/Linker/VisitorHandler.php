@@ -12,13 +12,13 @@ use App\Entity\Visitor;
 
 class VisitorHandler
 {
-    //@todo
-    public function handleVisitor($visitor){
-
-//        $repository = $this->getDoctrine()->getRepository(Visitor::class);
-//        $visitor = $repository->findOneBy(
-//            array('name' => 'Keyboard', 'price' => 19.99)
-//        );
-
-    }
+//    //@todo
+//    public function handleVisitor($visitor){
+//
+////        $repository = $this->getDoctrine()->getRepository(Visitor::class);
+////        $visitor = $repository->findOneBy(
+////            array('name' => 'Keyboard', 'price' => 19.99)
+////        );
+//
+//    }
 }
