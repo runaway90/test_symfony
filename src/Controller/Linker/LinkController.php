@@ -21,10 +21,17 @@ class LinkController extends AbstractController
     {
         $uu = [];
         $www = new VisitorController();
-        $www->new($uu); //тут создать нового визитора
+        //$www->new(); //тут создать нового визитора
             $uuid = Uuid::uuid4();
             $visitor = $uuid->toString();
-        print_r($www);die();
+
+//          $uu = $www;
+                  print_r($www);//die();
+        $www->setVisitor(5);
+        print_r($www);
+
+        print_r(new VisitorController());
+        //die();
         $link = new Link();
 //        $link->setName('Enter name');
 //        $link->setDescription('Description');
@@ -70,10 +77,12 @@ if ($request->isMethod('POST')) {
 
             return $this->redirectToRoute('link_post');
         }
-
+        $array =array(1=>[0=>1],[1 =>2]);
 //return $this->redirectToRoute('link_post');
         return $this->render('link/index.html.twig', array(
             'form' => $form->createView(),
+            'table_link' => [1,2,3,4,5,6,7,8],
+            'array_link' => $array
         ));
 
 

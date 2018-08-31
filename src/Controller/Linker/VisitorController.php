@@ -15,14 +15,20 @@ class VisitorController
 {
     public $visitor;
 
-    public function new($uu)
+    private $locate;
+
+    protected $host;
+
+
+    public function __construct()
     {
             $uuid = Uuid::uuid4();
             $uu = $uuid->toString();
 //            $visitor = new Visitor;
 //            $visitor->$this->setVisitor(Uuid::uuid4());
-            return $uu;
-
+            $this->visitor = $uu;
+            $this->locate = 1;
+            $this->host = $this->get();
     }
 
     /**
@@ -31,6 +37,11 @@ class VisitorController
     public function getVisitor()
     {
         return $this->visitor;
+    }
+
+    private function get()
+    {
+        return 21;
     }
 
     /**
